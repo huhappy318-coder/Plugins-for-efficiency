@@ -1,0 +1,321 @@
+/* 全局样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 400px;
+    min-width: 400px;
+    height: 520px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: #FFFFFF;
+    color: #1A1A1A;
+}
+
+.container {
+    width: 400px;
+    height: 520px;
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    overflow: hidden;
+}
+
+/* Header 样式 */
+.header {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid #F0F0F0;
+    position: relative;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FF6B35;
+    margin-right: 32px;
+}
+
+.tabs {
+    display: flex;
+    gap: 24px;
+}
+
+.tab {
+    background: none;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    color: #666666;
+    padding: 8px 0;
+    cursor: pointer;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.tab:hover {
+    color: #FF6B35;
+}
+
+.tab.active {
+    color: #FF6B35;
+}
+
+.tab-indicator {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 48px;
+    height: 2px;
+    background: #FF6B35;
+    transition: all 0.3s ease;
+}
+
+/* Content 样式 */
+.content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.tab-content {
+    display: none;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 16px 20px;
+    /* 隐藏滚动条 */
+    scrollbar-width: none; /* Firefox */
+}
+
+.tab-content::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* 空状态样式 */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #999999;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.empty-state svg {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 16px;
+    opacity: 0.3;
+}
+
+.empty-state p {
+    font-size: 14px;
+}
+
+/* 列表项样式 */
+.item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px;
+    background: #F8F8F8;
+    border-radius: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.item.fade-out {
+    opacity: 0;
+}
+
+/* 文字项 */
+.text-item .content {
+    flex: 1;
+    min-width: 0;
+}
+
+.text-item .preview {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #1A1A1A;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 4px;
+}
+
+/* 链接项 */
+.link-item .content {
+    flex: 1;
+    min-width: 0;
+}
+
+.link-item .domain {
+    font-size: 12px;
+    color: #666666;
+    margin-bottom: 4px;
+}
+
+.link-item .url {
+    font-size: 13px;
+    color: #1A1A1A;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.link-item .url:hover {
+    color: #FF6B35;
+    text-decoration: underline;
+}
+
+/* 图片项 */
+.image-item .content {
+    flex: 1;
+}
+
+.image-item .thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    background: #E8E8E8;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.image-item .thumbnail:hover {
+    opacity: 0.8;
+}
+
+.image-item .placeholder {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #E8E8E8;
+    border-radius: 4px;
+    color: #999999;
+    font-size: 12px;
+    text-align: center;
+    padding: 8px;
+}
+
+.image-item .source {
+    font-size: 12px;
+    color: #666666;
+    margin-top: 4px;
+}
+
+/* 时间戳 */
+.time {
+    font-size: 12px;
+    color: #999999;
+}
+
+/* 按钮组 */
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-end;
+}
+
+.btn {
+    padding: 4px 8px;
+    font-size: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.copy-btn {
+    background: #FF6B35;
+    color: #FFFFFF;
+}
+
+.copy-btn:hover {
+    background: #E85D04;
+}
+
+.copy-btn.copied {
+    background: #4CAF50;
+    color: #FFFFFF;
+}
+
+.delete-btn {
+    background: #E8E8E8;
+    color: #666666;
+}
+
+.delete-btn:hover {
+    background: #D8D8D8;
+}
+
+.jump-btn {
+    background: #FF6B35;
+    color: #FFFFFF;
+}
+
+.jump-btn:hover {
+    background: #E85D04;
+}
+
+/* Footer 样式 */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-top: 1px solid #F0F0F0;
+    font-size: 13px;
+    color: #666666;
+}
+
+.clear-btn {
+    background: #FF4757;
+    color: #FFFFFF;
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.clear-btn:hover {
+    background: #FF3742;
+}
+
+/* 响应式适配 */
+@media (max-width: 400px) {
+    .container {
+        width: 100%;
+        height: 100vh;
+    }
+}

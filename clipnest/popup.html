@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN" style="width:400px; min-width:400px; overflow:hidden;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClipNest — 剪贴板管理</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body style="width:400px; min-width:400px; margin:0; padding:0; overflow:hidden;">
+    <div class="container">
+        <!-- 顶部 Header -->
+        <header class="header">
+            <div class="logo">ClipNest</div>
+            <div class="tabs">
+                <button class="tab active" data-tab="text">文字</button>
+                <button class="tab" data-tab="link">链接</button>
+                <button class="tab" data-tab="image">图片</button>
+            </div>
+            <div class="tab-indicator"></div>
+        </header>
+
+        <!-- 列表区域 -->
+        <main class="content">
+            <div class="tab-content active" id="text-content">
+                <div class="list" id="text-list"></div>
+            </div>
+            <div class="tab-content" id="link-content">
+                <div class="list" id="link-list"></div>
+            </div>
+            <div class="tab-content" id="image-content">
+                <div class="list" id="image-list"></div>
+            </div>
+        </main>
+
+        <!-- 底部 -->
+        <footer class="footer">
+            <div class="count">共 <span id="count">0</span> 条</div>
+            <button class="clear-btn" id="clear-btn">清空全部</button>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

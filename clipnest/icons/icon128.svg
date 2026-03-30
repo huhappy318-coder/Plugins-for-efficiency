@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <!-- 背景 -->
+  <rect width="128" height="128" rx="24" fill="#FF6B35"/>
+  <!-- 剪贴板主体 -->
+  <rect x="24" y="36" width="80" height="82" rx="8" fill="#FFFFFF"/>
+  <!-- 顶部夹子外框 -->
+  <rect x="46" y="20" width="36" height="26" rx="8" fill="#FFFFFF"/>
+  <!-- 夹子内孔 -->
+  <rect x="54" y="23" width="20" height="14" rx="4" fill="#FF6B35"/>
+  <!-- 三条内容线 -->
+  <rect x="36" y="60" width="56" height="8" rx="4" fill="#FF6B35"/>
+  <rect x="36" y="76" width="56" height="8" rx="4" fill="#FF6B35"/>
+  <rect x="36" y="92" width="38" height="8" rx="4" fill="#FF6B35"/>
+</svg>

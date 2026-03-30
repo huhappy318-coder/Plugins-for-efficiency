@@ -1,0 +1,16 @@
+{
+  "name": "clipnest",
+  "version": "1.0.0",
+  "description": "1. **打开扩展程序管理页面**：    - Chrome：在地址栏输入 `chrome://extensions/` 并回车    - Edge：在地址栏输入 `edge://extensions/` 并回车",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "sharp": "^0.34.5"
+  }
+}
